@@ -12,32 +12,36 @@ body {
   line-height: 28px;
   font-weight: 300;
   color: #716c80;
+  overflow: hidden;
 }
 
 /* Side buttons CSS */
 .side_buttons_wrapper {
+  z-index: 2;
   position: fixed;
+
   right: 0;
   top: 18%;
 
   width: 42px;
   /* width: 120px; */
   height: 90px;
-  
+
   display: flex;
   flex-direction: column;
   gap: 7px;
 
   transition: 1s;
+  animation: load_side_button 10s;
 }
 
-.side_button{
+.side_button {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.side_content{
+.side_content {
   min-width: 100px;
 }
 
@@ -48,15 +52,15 @@ body {
   margin-left: 10px;
 }
 
-.side_button:nth-child(1) .side_content{
+.side_button:nth-child(1) .side_content {
   font-size: 10px;
   color: white;
-  letter-spacing: .11em;
+  letter-spacing: 0.11em;
   font-family: "Heebo", sans-serif;
   margin-top: 2px;
 }
 
-.side_button:nth-child(2) .side_icon svg{
+.side_button:nth-child(2) .side_icon svg {
   fill: red;
   height: 16px;
   margin-top: 10px;
@@ -64,15 +68,15 @@ body {
   margin-right: 7px;
 }
 
-.side_button:nth-child(2) .side_content{
+.side_button:nth-child(2) .side_content {
   font-size: 10px;
   color: black;
-  letter-spacing: .11em;
+  letter-spacing: 0.11em;
   font-family: "Heebo", sans-serif;
   margin-top: 4px;
 }
 
-.side_buttons_wrapper:hover{
+.side_buttons_wrapper:hover {
   width: 120px;
 }
 
@@ -343,7 +347,7 @@ body {
 
 /* The main header */
 .header {
-  width: 96%;
+  width: 98%;
   z-index: 1;
 
   margin: 0 40px;
@@ -368,7 +372,7 @@ body {
 }
 
 /* Header navbar */
-.navbar{
+.navbar {
   height: 100%;
 }
 
@@ -414,9 +418,8 @@ body {
   margin-left: -20px;
 
   border-radius: 15px;
-  padding: 24px 0; 
+  padding: 24px 0;
 }
-
 
 .navbar .navbar__selections > li div ul {
   width: 100%;
@@ -427,7 +430,7 @@ body {
   justify-content: space-evenly;
 }
 
-.navbar .navbar__selections > li div ul li{
+.navbar .navbar__selections > li div ul li {
   width: 100%;
   font-family: "Nunito", sans-serif;
   font-weight: 300;
@@ -438,7 +441,7 @@ body {
   text-transform: capitalize;
 }
 
-.navbar .navbar__selections > li div li{
+.navbar .navbar__selections > li div li {
   list-style-type: none;
 }
 
@@ -455,7 +458,7 @@ body {
 .navbar .navbar__selections .pages {
   width: 91px;
 }
-.navbar .navbar__selections .pages div{
+.navbar .navbar__selections .pages div {
   width: 261px;
   height: 488px;
 
@@ -522,9 +525,7 @@ body {
   display: block;
 } */
 
-
-
-/* Elements media queries */
+/* Elements */
 /* .navbar .elements{
     width: calc(100vw - 3px);
     max-width: 1920px;
@@ -548,12 +549,12 @@ body {
   align-items: center;
 }
 
-.selection_menu .cls{ 
+.selection_menu .cls {
   margin-right: 7px;
   position: relative;
 }
 
-.cls .count{
+.cls .count {
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -568,48 +569,46 @@ body {
   align-items: center;
 }
 
-.cls-1{
+.cls-1 {
   fill: #58468c;
 }
 
-.cls:hover .cls-1{
+.cls:hover .cls-1 {
   fill: #ff8a73;
 }
 
-.cls .count span{
+.cls .count span {
   color: white;
   font-size: 12px;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 300;
   line-height: 16px;
 }
 
-.search-1{
+.search-1 {
   fill: #58468c;
 }
 
-.search:hover .search-1{
+.search:hover .search-1 {
   fill: #ff8a73;
 }
 
-.open .open-box{
+.open .open-box {
   fill: #58468c;
 }
 
-.open .open-lines{
+.open .open-lines {
   fill: white;
 }
 
-.open:hover .open-box{
+.open:hover .open-box {
   fill: #ff8a73;
 }
-
 
 /* Section 1 CSS */
 #section1 {
   width: 80%;
 
-  height: 100%;
   min-height: 650px;
   max-height: 990px;
 
@@ -624,11 +623,14 @@ body {
 
 .section_contents {
   position: absolute;
-  top: calc(50% - 50px);
+  top: calc(10% + 8vh + 80px);
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  opacity: 0;
+  animation: load_session1 0.3s ease-in forwards;
 }
 
 #section1 .section_contents h1 {
@@ -646,10 +648,13 @@ body {
 }
 
 #section1 .section_contents p {
-  width: 484px;
+  width: max-content;
+
+  min-width: 480px;
+  max-width: 485px;
   margin: 30px 0;
 
-  color: #928994;
+  color: rgb(113, 108, 128);
   font-family: "Nunito", sans-serif;
   font-size: 20px;
   line-height: 33px;
@@ -670,6 +675,7 @@ body {
   font-weight: 500;
   font-size: 13px;
   line-height: 24px;
+  letter-spacing: 1px;
   color: #ffffff;
   border: none;
 }
@@ -685,61 +691,170 @@ body {
 }
 
 #section1 img {
+  opacity: 0;
   position: absolute;
 }
 
 #section1 .left_img {
-  right: calc(50% + 350px);
-  top: calc(50% - 200px);
+  right: calc(1% + 40vw + 250px);
+  top: calc(6vh + 100px);
 
   max-width: 475px;
-  max-height: 491px;
 
   width: 28%;
-  height: 50%;
+  animation: load_session1 0.3s forwards;
 }
 
 #section1 .wifi {
-  width: 9%;
+  width: 8%;
 
-  max-width: 150px;
-  top: calc(50% );
-  left: calc(50% - 330px);
+  min-width: 96px;
+  max-width: 144px;
+
+  top: calc(3vh + 105px);
+  right: calc(3% + 39vw + 115px);
+    
+  animation: load_session1 0.3s ease-in forwards;
+  animation-delay: 0.3s;
 }
 
 #section1 .comment {
+  width: 6%;
+
+  min-width: 79px;
   max-width: 109px;
-  top: 110px;
-  right: calc(50% - 110px);
+
+  top: calc(2vh + 60px);
+  right: calc(1% + 39vw - 50px);
+
+  animation: load_session1 0.3s ease-in forwards;
+  animation-delay: 0.5s;
 }
 
 #section1 .coins {
+  width: 8%;
+
+  min-width: 97px;
   max-width: 137px;
-  top: 220px;
-  right: calc(50% - 450px);
+
+  top: calc(7vh + 70px);
+  left: calc(10% + 34vw + 180px);
+  animation: load_session1 0.3s ease-in forwards;
+  animation-delay: 0.7s;
 }
 
 #section1 .person {
-  max-width: 90px;
-  right: calc(50% - 580px);
-  bottom: calc(50% - 110px);
+  width: 5%;
+
+  min-width: 70px;
+  max-width: 81px;
+
+  right: calc(38vw - 430px);
+  top: calc(5vh + 240px);
+
+  animation: load_session1 0.3s ease-in forwards;
+  animation-delay: 0.9s;
 }
 
 #section1 .shield {
-  min-height: 139px;
-  max-width: 120px;
-  right: calc(50% - 440px);
-  bottom: calc(50% - 390px);
+  width: 6%;
+
+  min-width: 81px;
+  max-width: 101px;
+
+  right: calc(39vw - 320px);
+  bottom: calc(2 * -7vh + 200px);
+
+  animation: load_session1 0.3s ease-in forwards;
+  animation-delay: 1.1s;
 }
 
 #section1 .wallet {
+  width: 8%;
+
+  min-width: 90px;
   max-width: 123px;
+
   right: calc(50% - 80px);
-  bottom: calc(50% - 500px);
+  bottom: calc(2 * -10vh + 150px);
+
+  animation: load_session1 0.3s ease-in forwards;
+  animation-delay: 1.3s;
 }
 
 #section1 .computer {
-  max-width: 150px;
-  bottom: calc(50% - 420px);
-  left: calc(50% - 380px);
+  width: 9%;
+
+  min-width: 124px;
+  max-width: 145px;
+
+  bottom: calc(-15vh + 150px);
+  left: calc(38vw - 280px);
+
+  animation: load_session1 0.3s ease-in forwards;
+  animation-delay: 1.5s;
 }
+
+/* Appearing animations */
+@keyframes load_session1 {
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+
+/* Desktop responsive */
+@media only screen and (min-width: 1700px) {
+  #section1 .section_contents {
+    top: calc(9vh + 280px);
+  }
+
+  #section1 .section_contents p {
+    width: 180px;
+  }
+
+  #section1 .left_img {
+    top: calc(7vh + 170px);
+    left: calc(38vw - 700px);
+  }
+
+  #section1 .wifi{
+    top: calc(5vh + 130px);
+    right: calc(3% + 39vw + 115px);
+  }
+
+  #section1 .comment{
+    top: calc(3vh + 70px);
+    right: calc(39vw - 90px);
+  }
+
+  #section1 .coins{
+    top: calc(5vh + 170px);
+    left: calc(40vw + 320px);
+  }
+
+  #section1 .person {
+    right: calc(40vw - 600px);
+    top: calc(6vh + 390px);
+  }
+
+  #section1 .wallet {
+    bottom: calc(-7vh - 250px);
+  }
+
+  #section1 .shield {
+    bottom: calc(-7vh - 100px);
+    right: calc(39vw - 380px);
+  }
+
+  #section1 .computer {
+    bottom: calc(-7vh - 120px);
+    left: calc(39vw - 350px);
+  }
+}
+
+/* Mobile responsive */
