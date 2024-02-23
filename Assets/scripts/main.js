@@ -74,7 +74,7 @@ section2_observer.observe();
 // Define section3 variables
 const section3 = document.querySelector("#section3");
 
-const section3_elements_classes = [
+const section3_element_classes = [
   ".background_image",
   ".content_header",
   ".content_para",
@@ -82,21 +82,59 @@ const section3_elements_classes = [
   ".images img",
 ];
 
-let section3_elements = appendElems(section3, section3_elements_classes);
+let section3_elements = appendElems(section3, section3_element_classes);
 
 const section3_callback = async (elements) => {
   for await (let li of elements) {
     li.classList.add("section3_show");
     if (li.classList[0].includes("img")) {
-      await delay(50);
+      await delay(0);
     } 
     else {
-      await delay(300);
+      await delay(100);
     }
   }
 };
 
+// Define observer
 let section3_observer = new sectionObserver(section3, () => {
   section3_callback(section3_elements);
 });
+
+// Observe
 section3_observer.observe();
+
+
+// Section 5
+// Define section5 variables
+const section5 = document.querySelector('#section5');
+
+const section5_element_classes = [
+  '.background_image img',
+  '.side_image',
+  '.content_header',
+  '.content_para',
+  '.details',
+  '.background_letter span'
+]
+
+const section5_elements = appendElems(section5, section5_element_classes)
+
+const section5_callback = async (elements) => {
+  for await(let elem of elements){
+    elem.classList.add('section5_show');
+    if (elem.classList[0] == 'section5_show') {
+      await delay(100);
+    } else {
+      await delay(500);
+    }
+  }
+}
+
+// Define observer
+const section5_observer = new sectionObserver(section5, () => {
+  section5_callback(section5_elements)
+})
+
+// Observe
+section5_observer.observe();
