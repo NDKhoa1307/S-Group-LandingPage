@@ -16,6 +16,56 @@ function appendElems(section, elements_classes) {
   return elements;
 }
 
+// Header animation
+
+const header = document.querySelector(".header");
+var starting = true;
+
+function handleScroll() {
+  const scrollPosition = window.pageYOffset;
+
+  if (scrollPosition > 200) {
+    if (starting) {
+      header.style.transition = '0s'
+      header.style.transform = "translateY(-100%)";
+      delay(0).then(() => {
+        header.style.transition = '0.8s'
+        header.style.transform = "translateY(0%)";
+      });
+    }
+    starting = false;
+    header.classList.add("header-active");
+    let logo = header.querySelector(".logo img");
+    logo.src = "./Assets/img/header_img/logo1.png";
+    header.querySelector(".navbar .navbar__selections").style.marginTop =
+      "20px";
+  } else {
+    starting = true;
+    header.classList.remove("header-active");
+    let logo = header.querySelector(".logo img");
+    logo.src = "./Assets/img/header_img/logo2.png";
+    header.querySelector(".navbar .navbar__selections").style.marginTop =
+      "40px";
+  }
+}
+
+window.addEventListener("scroll", handleScroll);
+
+// Return button animation
+const return_button = document.querySelector('.return_button')
+function handleReturnScroll(){
+  const scrollPosition = window.pageYOffset;
+
+  if(scrollPosition > 200){
+    return_button.style.display = 'inline'
+  }
+  else{
+    return_button.style.display = 'none'
+  }
+}
+
+window.addEventListener("scroll", handleReturnScroll);
+
 // sectionObserver prototype
 class sectionObserver {
   constructor(section_name, section_callback) {
@@ -24,7 +74,6 @@ class sectionObserver {
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log(this.section_name);
           this.section_callback();
         }
       });
@@ -35,6 +84,71 @@ class sectionObserver {
     return this.observer.observe(this.section_name);
   }
 }
+
+// Navbar selection menu
+const navItems = document.querySelectorAll(".navbar .navbar__selections > li");
+
+// For every nav componenent except elements
+Array.from(navItems)
+  .slice(0, -1)
+  .forEach((navItem) => {
+    const dropdown = navItem.querySelector("div");
+    // When mouse enter, add display block to dropdown
+    navItem.addEventListener("mouseenter", () => {
+      dropdown.style.display = "block";
+    });
+
+    navItem.addEventListener("mouseleave", (event) => {
+      dropdown.style.display = "none";
+    });
+  });
+
+// For elements
+const nav_elements = document.querySelector(
+  ".navbar .navbar__selections .elements"
+);
+const nav_elem_dropdown = document.querySelector(
+  ".navbar .navbar__selections .elements_dropdown"
+);
+
+nav_elements.addEventListener("mouseenter", () => {
+  nav_elem_dropdown.style.display = "block";
+});
+nav_elements.addEventListener("mouseleave", () => {
+  nav_elem_dropdown.style.display = "none";
+});
+
+nav_elem_dropdown.addEventListener("mouseenter", () => {
+  nav_elem_dropdown.style.display = "block";
+});
+nav_elem_dropdown.addEventListener("mouseleave", () => {
+  nav_elem_dropdown.style.display = "none";
+});
+
+// Cart
+let flag = true
+const clsItems = document.querySelector(".cls");
+const cart_element = clsItems.querySelector(".cart");
+
+clsItems.addEventListener("mouseenter", () => {
+  cart_element.style.display = "flex";
+});
+clsItems.addEventListener("mouseleave", async () => {
+  await delay(300).then(() => {
+    if (flag) {
+      cart_element.style.display = "none";
+    }
+  });
+});
+
+cart_element.addEventListener("mouseenter", () => {
+  flag = false
+  cart_element.style.display = "flex";
+});
+cart_element.addEventListener("mouseleave", () => {
+  flag = true
+  cart_element.style.display = "none";
+});
 
 // Section 2
 // Define section2 variables
@@ -178,7 +292,7 @@ section6_observer.observe();
 // Section 8
 const section8 = document.querySelector("#section8");
 
-const section8_callback = () => {
+const section8_callback = async () => {
   const scroller = section8.querySelector(".scroller");
 
   const imageSources = [
@@ -193,26 +307,40 @@ const section8_callback = () => {
   ];
 
   let currentImageIndex = 0;
+  let isAnimating = false;
 
-  async function shiftAndAppendImage() {
-    await delay(3000).then(() => {
-      const firstImage = scroller.querySelector('img');
-      const newImage = document.createElement("img");
+  const shiftAndAppendImage = async () => {
+    isAnimating = true;
+    const firstImage = scroller.querySelector("img");
+    const newImage = document.createElement("img");
 
-      newImage.src = imageSources[currentImageIndex];
-      
-      firstImage.style.transition = "all 0.5s ease-in-out";
+    newImage.src = imageSources[currentImageIndex];
 
-      firstImage.style.marginLeft = `-${firstImage.clientWidth}px`;
-      console.log(firstImage.classList)
+    firstImage.style.marginLeft = `-${firstImage.clientWidth}px`;
+    firstImage.style.transition = "all 0.5s ease-in-out";
+    currentImageIndex = (currentImageIndex + 1) % imageSources.length;
 
-      scroller.removeChild(firstImage);
-      scroller.appendChild(newImage);
-
-      currentImageIndex = (currentImageIndex + 1) % imageSources.length;
+    await new Promise((resolve) => {
+      firstImage.addEventListener("transitionend", resolve);
     });
+
+    scroller.removeChild(firstImage);
+    scroller.appendChild(newImage);
+
+    
+    isAnimating = false;
+  };
+
+  async function startAnimationLoop() {
+    while (true) {
+      if (!isAnimating) {
+        await shiftAndAppendImage();
+      }
+      await new Promise((resolve) => setTimeout(resolve, 5000));
+    }
   }
-  setInterval(shiftAndAppendImage, 3000);
+
+  startAnimationLoop();
 };
 
 const section8_observer = new sectionObserver(section8, () => {
