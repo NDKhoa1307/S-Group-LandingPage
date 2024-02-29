@@ -3,130 +3,877 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Poppins:wght@300;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Nunito:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="./Assets/css/style.css" />
+
+    <!-- Favicons + title -->
+    <link rel="shortcut icon" href="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/cropped-favicon-32x32.png" type="image/x-icon">
+    <title>Hosting Home - Foton</title>
   </head>
   <body>
     <!-- The main page -->
     <div class="main_page">
-      <!-- Images at the top of the page -->
-      <div class="header_img">
-        <div class="middle-img">
-          <div class="img_wrapper">
+      <!-- Button to move to the top of the page -->
+      <div class="return_button">
+        <a href="#">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+      <header>
+        <!-- Images at the top of the page -->
+        <div class="header_img">
+          <div class="middle_img">
             <img src=".\Assets\img\header_img\h13-rev-img-3-2.png" alt="" />
           </div>
-        </div>
 
-        <div class="right-img">
-          <div class="img_wrapper">
+          <div class="right_img">
             <img src="./Assets/img/header_img/h13-rev-img-3.png" alt="" />
           </div>
-        </div>
 
-        <div class="left-img">
-          <div class="img1_wrapper">
+          <div class="left_img">
             <img src=".\Assets\img\header_img\h13-rev-img-2-2.png" alt="" />
-          </div>
-          <div class="img2_wrapper">
             <img src=".\Assets\img\header_img\h13-rev-img-1-2.png" alt="" />
           </div>
         </div>
 
-
+        <!-- Image at the bottom of the page -->
+        <div class="footer_img">
+          <img
+            src="https://foton.qodeinteractive.com/wp-content/uploads/2019/11/h13-bg-img-1.png"
+            alt=""
+            class="background_image"
+          />
+        </div>
 
         <!-- Header bar -->
-        <header class="header">
+        <div class="header">
           <div class="logo">
             <img src="./Assets/img/header_img/logo2.png" alt="" />
           </div>
           <nav class="navbar">
-            <ul>
-              <li>HOME</li>
-              <li>PAGES</li>
-              <li>PORTFOLIO</li>
-              <li>BLOG</li>
-              <li>SHOP</li>
-              <li>ELEMENTS</li>
+            <ul class="navbar__selections">
+              <li class="home">
+                <span>HOME</span>
+                <div>
+                  <ul>
+                    <li>Main Home</li>
+                    <li>App Landing Home</li>
+                    <li>Hosting Home</li>
+                    <li>Startup Agency Home</li>
+                    <li>Metro Showcase</li>
+                    <li>Marketing Home</li>
+                    <li>Tech Home</li>
+                    <li>SaaS Home</li>
+                    <li>Digital Agency</li>
+                    <li>Product Presentation</li>
+                    <li>Split Slider Home</li>
+                    <li>App Presentation</li>
+                    <li>Vertical Showcase</li>
+                    <li>Parallax Showcase</li>
+                    <li>Landing</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="pages">
+                <span>PAGES</span>
+                <div>
+                  <ul>
+                    <li>About Us</li>
+                    <li>About Me</li>
+                    <li>Contact Us</li>
+                    <li>Get In Touch</li>
+                    <li>Our Services</li>
+                    <li>Our Clients</li>
+                    <li>What We Offer</li>
+                    <li>Meet The Team</li>
+                    <li>Pricing Plans</li>
+                    <li>Coming Soon</li>
+                    <li>FAQ Page</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="portfolio">
+                <span>PORTFOLIO</span>
+                <div>
+                  <ul>
+                    <li>Standard</li>
+                    <li>Gallery</li>
+                    <li>Masonry</li>
+                    <li>Masonry Wide</li>
+                    <li>Layouts</li>
+                    <li>Singles</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="blog">
+                <span>BLOG</span>
+                <div>
+                  <ul>
+                    <li>Right Sidebar</li>
+                    <li>Left Sidebar</li>
+                    <li>No Sidebar</li>
+                    <li>Masonry</li>
+                    <li>Post Types</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="shop">
+                <span>SHOP</span>
+                <div>
+                  <ul>
+                    <li>Product List</li>
+                    <li>Single Product</li>
+                    <li>Layouts</li>
+                    <li>Shop Pages</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="elements">
+                <span>ELEMENTS</span>
+              </li>
+              <div class="elements_dropdown">
+                <div class="contents">
+                  <div class="column-1">
+                    <h1>PRESENTATION</h1>
+                    <ul>
+                      <li>Parallax Section</li>
+                      <li>Singe Image</li>
+                      <li>Product Showcase</li>
+                      <li>Floating Images</li>
+                      <li>Team</li>
+                      <li>Triple Frame Highlight</li>
+                      <li>Video Button</li>
+                      <li>Split Slider</li>
+                    </ul>
+                  </div>
+                  <div class="column-2">
+                    <h1>CLASSIC</h1>
+                    <ul>
+                      <li>Accordions</li>
+                      <li>Tabs</li>
+                      <li>Clients</li>
+                      <li>Buttons</li>
+                      <li>Icon With Text</li>
+                      <li>Icon List Items</li>
+                      <li>Progress Bar</li>
+                      <li>Contact Form</li>
+                    </ul>
+                  </div>
+                  <div class="column-3">
+                    <h1>TYPOGRAPHY</h1>
+                    <ul>
+                      <li>Blockquote</li>
+                      <li>Columns</li>
+                      <li>Headings</li>
+                      <li>Custom Font</li>
+                      <li>Dropcaps & Highlights</li>
+                      <li>Section Title</li>
+                      <li>Separators</li>
+                      <li>Testimonials</li>
+                    </ul>
+                  </div>
+                  <div class="column-4">
+                    <h1>INFORGRAPHIC</h1>
+                    <ul>
+                      <li>Comparison Pricing</li>
+                      <li>Pie Chart</li>
+                      <li>Pricing Tables</li>
+                      <li>Google Maps</li>
+                      <li>Countdown</li>
+                      <li>Counters</li>
+                      <li>Portfolio List</li>
+                      <li>Blog List</li>
+                      <li>Shop List</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </ul>
           </nav>
 
-          <div class="selection_menu"></div>
-        </header>
-      </div>
-
-
-
-      <!-- Section 1 -->
-      <section id="section1">
-        <!-- The content in the center -->
-        <div class="section_contents">
-          <h1>Untapped Potential</h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            reprehenderit ut voluptatibus illum deleniti!
-          </p>
-
-          <div class="section_buttons">
-            <button class="button1">READ MORE</button>
-            <button class="button2">CONTACT US</button>
+          <div class="selection_menu">
+            <div class="cls">
+              <div class="count"><span>0</span></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="21"
+                viewBox="0 0 22 21"
+              >
+                <path
+                  id="Store"
+                  class="cls-1"
+                  d="M6.1,2.095v0h0Zm15.49,4.087c-0.014-.017-0.027-0.028-0.034-0.036L21.4,6.03h0l-0.2-.108a0.194,0.194,0,0,0-.1-0.032L6.134,3.976V2.348L6.122,2.212,6.116,2.185l-0.3-.53L5.8,1.638l-0.04-.031C5.749,1.6,5.74,1.6,5.73,1.591l-3.5-1.4A1,1,0,0,0,.958.688,0.891,0.891,0,0,0,.943,1.4a0.945,0.945,0,0,0,.543.525l2.68,1.047V14.943a2.688,2.688,0,0,0,1.968,2.528,2.46,2.46,0,0,0-.168.89,2.728,2.728,0,0,0,2.813,2.628,2.728,2.728,0,0,0,2.813-2.628,2.468,2.468,0,0,0-.119-0.761h4.234a2.471,2.471,0,0,0-.12.761,2.819,2.819,0,0,0,5.626,0,2.729,2.729,0,0,0-2.813-2.63H7.011a0.839,0.839,0,0,1-.881-0.788v-0.95a3.086,3.086,0,0,0,.881.129H18.985a2.759,2.759,0,0,0,2.844-2.658V6.75l0-.123v0l0.006-.03ZM19.866,7.611v3.846a0.842,0.842,0,0,1-.881.794H7.011a0.84,0.84,0,0,1-.881-0.788v-5.6ZM8.784,19.116a0.81,0.81,0,0,1-.849-0.761A0.819,0.819,0,0,1,8.784,17.6,0.764,0.764,0,1,1,8.784,19.116Zm9.62,0a0.809,0.809,0,0,1-.849-0.761A0.819,0.819,0,0,1,18.4,17.6,0.764,0.764,0,1,1,18.4,19.116Z"
+                ></path>
+              </svg>
+              <div class="cart"><span>No products in the cart.</span></div>
+            </div>
+            <div class="search">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 22 21"
+              >
+                <path
+                  class="search-1"
+                  d="M21.5,19.3h0l-4.669-4.667a9.007,9.007,0,1,0-1.389,1.388l4.67,4.669a0.991,0.991,0,0,0,.694.29,0.985,0.985,0,0,0,.98-0.984A0.978,0.978,0,0,0,21.5,19.3ZM16.838,9A7.033,7.033,0,1,1,9.8,1.967,7.043,7.043,0,0,1,16.838,9Z"
+                ></path>
+              </svg>
+            </div>
+            <div class="open">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="40"
+                height="40"
+                x="0px"
+                y="0px"
+                viewBox="0 0 40 40"
+                style="enable-background: new 0 0 40 40"
+                xml:space="preserve"
+              >
+                <g>
+                  <path
+                    class="open-box"
+                    d="M35,40H5c-2.8,0-5-2.2-5-5V5c0-2.8,2.2-5,5-5h30c2.8,0,5,2.2,5,5v30C40,37.8,37.8,40,35,40z"
+                  ></path>
+                </g>
+                <path
+                  class="open-lines"
+                  d="M28,21H12c-0.6,0-1-0.4-1-1v0c0-0.6,0.4-1,1-1h16c0.6,0,1,0.4,1,1v0C29,20.6,28.6,21,28,21z"
+                ></path>
+                <path
+                  class="open-lines"
+                  d="M28,16H12c-0.6,0-1-0.4-1-1v0c0-0.6,0.4-1,1-1h16c0.6,0,1,0.4,1,1v0C29,15.6,28.6,16,28,16z"
+                ></path>
+                <path
+                  class="open-lines"
+                  d="M28,26H12c-0.6,0-1-0.4-1-1v0c0-0.6,0.4-1,1-1h16c0.6,0,1,0.4,1,1v0C29,25.6,28.6,26,28,26z"
+                ></path>
+              </svg>
+            </div>
           </div>
         </div>
+      </header>
+      <header class="header_mobile">
+        <div class="centered_position">
+          <i class="fa-solid fa-bars" id="menu-toggle"></i>
+          <img src="/Assets/img/header_img/logo1.png" alt="" class="logo" />
+        </div>
+      </header>
+      <ul class="mobile_navbar">
+        <li class="home">
+          <span>HOME</span>
+          <span>></span>
+          <div>
+            <ul>
+              <li>Main Home</li>
+              <li>App Landing Home</li>
+              <li>Hosting Home</li>
+              <li>Startup Agency Home</li>
+              <li>Metro Showcase</li>
+              <li>Marketing Home</li>
+              <li>Tech Home</li>
+              <li>SaaS Home</li>
+              <li>Digital Agency</li>
+              <li>Product Presentation</li>
+              <li>Split Slider Home</li>
+              <li>App Presentation</li>
+              <li>Vertical Showcase</li>
+              <li>Parallax Showcase</li>
+              <li>Landing</li>
+            </ul>
+          </div>
+        </li>
+        <li class="pages">
+          <span>PAGES</span>
+          <span>></span>
+          <div>
+            <ul>
+              <li>About Us</li>
+              <li>About Me</li>
+              <li>Contact Us</li>
+              <li>Get In Touch</li>
+              <li>Our Services</li>
+              <li>Our Clients</li>
+              <li>What We Offer</li>
+              <li>Meet The Team</li>
+              <li>Pricing Plans</li>
+              <li>Coming Soon</li>
+              <li>FAQ Page</li>
+            </ul>
+          </div>
+        </li>
+        <li class="portfolio">
+          <span>PORTFOLIO</span>
+          <span>></span>
+          <div>
+            <ul>
+              <li>Standard</li>
+              <li>Gallery</li>
+              <li>Masonry</li>
+              <li>Masonry Wide</li>
+              <li>Layouts</li>
+              <li>Singles</li>
+            </ul>
+          </div>
+        </li>
+        <li class="blog">
+          <span>BLOG</span>
+          <span>></span>
+          <div>
+            <ul>
+              <li>Right Sidebar</li>
+              <li>Left Sidebar</li>
+              <li>No Sidebar</li>
+              <li>Masonry</li>
+              <li>Post Types</li>
+            </ul>
+          </div>
+        </li>
+        <li class="shop">
+          <span>SHOP</span>
+          <span>></span>
+          <div>
+            <ul>
+              <li>Product List</li>
+              <li>Single Product</li>
+              <li>Layouts</li>
+              <li>Shop Pages</li>
+            </ul>
+          </div>
+        </li>
+        <li class="elements">
+          <span>ELEMENTS</span>
+          <span>></span>
+          <div class="elements_dropdown">
+            <div class="row-1">
+              <span>Presentation</span>
+              <span>></span>
+              <ul>
+                <li>Parallax Section</li>
+                <li>Singe Image</li>
+                <li>Product Showcase</li>
+                <li>Floating Images</li>
+                <li>Team</li>
+                <li>Triple Frame Highlight</li>
+                <li>Video Button</li>
+                <li>Split Slider</li>
+              </ul>
+            </div>
+            <div class="row-2">
+              <span>Classic</span>
+              <span>></span>
+              <ul>
+                <li>Accordions</li>
+                <li>Tabs</li>
+                <li>Clients</li>
+                <li>Buttons</li>
+                <li>Icon With Text</li>
+                <li>Icon List Items</li>
+                <li>Progress Bar</li>
+                <li>Contact Form</li>
+              </ul>
+            </div>
+            <div class="row-3">
+              <span>Typography</span>
+              <span>></span>
+              <ul>
+                <li>Blockquote</li>
+                <li>Columns</li>
+                <li>Headings</li>
+                <li>Custom Font</li>
+                <li>Dropcaps & Highlights</li>
+                <li>Section Title</li>
+                <li>Separators</li>
+                <li>Testimonials</li>
+              </ul>
+            </div>
+            <div class="row-4">
+              <span>Inforgraphic</span>
+              <span>></span>
+              <ul>
+                <li>Comparison Pricing</li>
+                <li>Pie Chart</li>
+                <li>Pricing Tables</li>
+                <li>Google Maps</li>
+                <li>Countdown</li>
+                <li>Counters</li>
+                <li>Portfolio List</li>
+                <li>Blog List</li>
+                <li>Shop List</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
 
+      <main>
+        <!-- Section 1 -->
+        <section id="section1">
+          <!-- The content in the center -->
+          <div class="section_contents">
+            <h1>Untapped Potential</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, diam
+              nonummy nibhie euismod vivamus at mauris.
+            </p>
 
-        <!-- Images surrounding content -->
-        <img
-          src="./Assets/img/section1_img/h13-rev-img-4-3.png"
-          alt=""
-          class="left_img"
-        />
-        <img
-          src="./Assets/img/section1_img/h13-rev-img-5-2.png"
-          alt=""
-          class="wifi"
-        />
-        <img
-          src="./Assets/img/section1_img/h13-rev-img-6-2.png"
-          alt=""
-          class="comment"
-        />
-        <img
-          src="./Assets/img/section1_img/h13-rev-img-7-2.png"
-          alt=""
-          class="coins"
-        />
-        <img
-          src="./Assets/img/section1_img/h13-rev-img-8-2.png"
-          alt=""
-          class="person"
-        />
-        <img
-          src="./Assets/img/section1_img/h13-rev-img-9-2.png"
-          alt=""
-          class="shield"
-        />
-        <img
-          src="./Assets/img/section1_img/h13-rev-img-10-2.png"
-          alt=""
-          class="wallet"
-        />
-        <img
-          src="./Assets/img/section1_img/h13-rev-img-11-2.png"
-          alt=""
-          class="computer"
-        />
-      </section>
+            <div class="section_buttons">
+              <button class="button1">READ MORE</button>
+              <button class="button2">CONTACT US</button>
+            </div>
+          </div>
+
+          <!-- Images surrounding content -->
+          <img
+            src="./Assets/img/section1_img/h13-rev-img-4-3.png"
+            alt=""
+            class="left_img"
+          />
+          <img
+            src="./Assets/img/section1_img/h13-rev-img-5-2.png"
+            alt=""
+            class="wifi"
+          />
+          <img
+            src="./Assets/img/section1_img/h13-rev-img-6-2.png"
+            alt=""
+            class="comment"
+          />
+          <img
+            src="./Assets/img/section1_img/h13-rev-img-7-2.png"
+            alt=""
+            class="coins"
+          />
+          <img
+            src="./Assets/img/section1_img/h13-rev-img-8-2.png"
+            alt=""
+            class="person"
+          />
+          <img
+            src="./Assets/img/section1_img/h13-rev-img-9-2.png"
+            alt=""
+            class="shield"
+          />
+          <img
+            src="./Assets/img/section1_img/h13-rev-img-10-2.png"
+            alt=""
+            class="wallet"
+          />
+          <img
+            src="./Assets/img/section1_img/h13-rev-img-11-2.png"
+            alt=""
+            class="computer"
+          />
+        </section>
+
+        <section id="section2">
+          <div class="background_letters">
+            <span class="background_letter">S</span>
+            <span class="background_letter">e</span>
+            <span class="background_letter">c</span>
+            <span class="background_letter">u</span>
+            <span class="background_letter">r</span>
+            <span class="background_letter">e</span>
+          </div>
+
+          <div class="background_image">
+            <img src="./Assets/img/session2_img/h13-rev2-img-6-2.png" alt="" />
+          </div>
+
+          <div class="main_contents">
+            <div class="content">
+              <h1 class="content_header">
+                Acessing your data like never before
+              </h1>
+              <p class="content_para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                quia id ut, repellat nihil voluptatum, quaerat consequatur amet
+                blanditiis excepturi porro unde, deserunt deleniti. Delectus
+                ipsa soluta est enim cupiditate, voluptatem commodi.
+              </p>
+              <div class="details">
+                <img
+                  src="./Assets/img/session2_img/h13-rev2-img-7.png"
+                  alt=""
+                />
+                <div>
+                  <p>Erin Boettcher</p>
+                  <p>WEB DEVELOPER</p>
+                </div>
+              </div>
+            </div>
+            <div class="images">
+              <img
+                src="Assets/img/session2_img/h13-rev2-img-1.png"
+                alt=""
+                class="robot"
+              />
+              <img
+                src="Assets/img/session2_img/h13-rev2-img-2.png"
+                alt=""
+                class="modem_left"
+              />
+              <img
+                src="Assets/img/session2_img/h13-rev2-img-3.png"
+                alt=""
+                class="gears"
+              />
+              <img
+                src="Assets/img/session2_img/h13-rev2-img-4.png"
+                alt=""
+                class="glass"
+              />
+              <img
+                src="Assets/img/session2_img/h13-rev2-img-5.png"
+                alt=""
+                class="modem_right"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section id="section3">
+          <div class="background_image">
+            <img src="./Assets/img/section3_img/h13-rev3-img-8-3.png" alt="" />
+          </div>
+
+          <div class="main_contents">
+            <div class="images">
+              <img
+                src="./Assets/img/section3_img/h13-rev3-img-4-2.png"
+                alt=""
+                class="middle_img"
+              />
+              <img
+                src="./Assets/img/section3_img/h13-rev3-img-5-2.png"
+                alt=""
+                class="modem_left"
+              />
+              <img
+                src="./Assets/img/section3_img/h13-rev3-img-6-2.png"
+                alt=""
+                class="modem_right"
+              />
+              <img
+                src="./Assets/img/section3_img/h13-rev3-img-3.png"
+                alt=""
+                class="big_shield"
+              />
+              <img
+                src="./Assets/img/section3_img/h13-rev3-img-7-2.png"
+                alt=""
+                class="modem_bottom"
+              />
+            </div>
+
+            <div class="content">
+              <h1 class="content_header">
+                Digital Agency Service Providers of Future
+              </h1>
+              <p class="content_para">
+                Quisque ac dolor nec nisl pellentesque ullamc. Vestibulum sed
+                ultrices mi morbi dignissm.
+              </p>
+              <button class="button">READ MORE</button>
+            </div>
+          </div>
+        </section>
+        <section id="section4">
+          <div class="section_title">
+            <h1 class="section_header">Open-source services</h1>
+            <p class="section_para">
+              Used alone or in an intergrated manner, our premium open-source
+              services cover all of your data infrastructure needs. and much
+              more.
+            </p>
+          </div>
+          <div class="section_boxes">
+            <div class="section_box">
+              <img
+                src="./Assets/img/section4_img/landing-icon-1.png"
+                alt=""
+              /><span>WPBakery Page Builder</span>
+            </div>
+            <div class="section_box">
+              <img
+                src="./Assets/img/section4_img/h13-iwt-img-1.png"
+                alt=""
+              /><span>Elementor Page Builder</span>
+            </div>
+            <div class="section_box">
+              <img
+                src="./Assets/img/section4_img/landing-icon-3.png"
+                alt=""
+              /><span>No Coding Required</span>
+            </div>
+            <div class="section_box">
+              <img
+                src="./Assets/img/section4_img/landing-icon-4.png"
+                alt=""
+              /><span>Slider Revolution</span>
+            </div>
+          </div>
+          <div class="section_boxes">
+            <div class="section_box">
+              <img
+                src="./Assets/img/section4_img/landing-icon-5.png"
+                alt=""
+              /><span>Woo Commerce</span>
+            </div>
+            <div class="section_box">
+              <img
+                src="./Assets/img/section4_img/landing-icon-6.png"
+                alt=""
+              /><span>Fully Responsive</span>
+            </div>
+            <div class="section_box">
+              <img
+                src="./Assets/img/section4_img/landing-icon-7.png"
+                alt=""
+              /><span>Two Free Plugins</span>
+            </div>
+            <div class="section_box">
+              <img
+                src="./Assets/img/section4_img/landing-icon-8.png"
+                alt=""
+              /><span>Limitless Typography</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="section5">
+          <div class="background_image">
+            <img src="./Assets/img/section5_img/h13-rev4-img-1-2.png" alt="" />
+          </div>
+          <div class="background_letter">
+            <span>U</span>
+            <span>n</span>
+            <span>i</span>
+            <span>q</span>
+            <span>u</span>
+            <span>e</span>
+          </div>
+          <div class="main_contents">
+            <img
+              src="./Assets/img/section5_img/h13-rev4-img-2.png"
+              alt=""
+              class="side_image"
+            />
+            <div class="content">
+              <h1 class="content_header">Smart and flexible</h1>
+              <p class="content_para">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                sagittis egestas ante, sed viverra nunc tincidunt nec. Integer
+                non condimentum elit, sit amet feugiat lorem.
+              </p>
+              <ul class="details">
+                <li>
+                  <p class="number">927</p>
+                  <p class="words">HAPPY CLIENTS</p>
+                </li>
+                <li>
+                  <p class="number">533</p>
+                  <p class="words">PROJECT PLANS</p>
+                </li>
+                <li>
+                  <p class="number">375</p>
+                  <p class="words">SPREAD SERVICES</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section id="section6">
+          <div class="background_image">
+            <img src=".\Assets\img\section6_img\h13-rev5-img-4-3.png" alt="" />
+          </div>
+
+          <div class="main_contents">
+            <div class="images">
+              <img
+                src="./Assets/img/section6_img/h13-rev5-img-1-5.png"
+                alt=""
+                class="bottom_img"
+              /><img
+                src="./Assets/img/section6_img/h13-rev5-img-2-3.png"
+                alt=""
+                class="middle_img"
+              />
+              <img
+                src="./Assets/img/section6_img/h13-rev5-img-3-2.png"
+                alt=""
+                class="top_img"
+              />
+            </div>
+            <div class="content">
+              <h1 class="content_header">
+                Protecting Data the Way It Was Intended
+              </h1>
+              <p class="content_para">
+                Quisque ac dolor nec nisl pellentesque ullamc. Vestibulum sed
+                ultrices mi morbi dignissm.
+              </p>
+              <button class="button">READ MORE</button>
+            </div>
+          </div>
+        </section>
+        <section id="section7">
+          <div class="card card1">
+            <div class="pricing">
+              <h1 class="price">
+                <span>$</span>
+                <span>12</span>
+              </h1>
+              <h3 class="duration">EVERY MONTH OR YEARLY</h3>
+            </div>
+            <div class="subscription">
+              <h1 class="subscription_header">
+                <span>Personal</span> <span>Good Price</span>
+              </h1>
+              <ul class="description">
+                <li>Mobile-Optimized</li>
+                <li>Free Custom Domain</li>
+                <li>Best Hoisting</li>
+                <li>Outstanding Support</li>
+                <li>Happy Customers</li>
+              </ul>
+              <button class="button">READ MORE</button>
+            </div>
+          </div>
+          <div class="card card2">
+            <div class="pricing">
+              <h1 class="price">
+                <span>$</span>
+                <span>37</span>
+              </h1>
+              <h3 class="duration">EVERY MONTH OR YEARLY</h3>
+            </div>
+            <div class="subscription">
+              <h1 class="subscription_header">
+                <span>Business</span> <span>Special Offer</span>
+              </h1>
+              <ul class="description">
+                <li>Mobile-Optimized</li>
+                <li>Free Custom Domain</li>
+                <li>Best Hoisting</li>
+                <li>Outstanding Support</li>
+                <li>Happy Customers</li>
+              </ul>
+              <button class="button">READ MORE</button>
+            </div>
+          </div>
+          <div class="card card3">
+            <div class="pricing">
+              <h1 class="price">
+                <span>$</span>
+                <span>78</span>
+              </h1>
+              <h3 class="duration">EVERY MONTH OR YEARLY</h3>
+            </div>
+            <div class="subscription">
+              <h1 class="subscription_header">
+                <span>Enterprise</span> <span>Best Option</span>
+              </h1>
+              <ul class="description">
+                <li>Mobile-Optimized</li>
+                <li>Free Custom Domain</li>
+                <li>Best Hoisting</li>
+                <li>Outstanding Support</li>
+                <li>Happy Customers</li>
+              </ul>
+              <button class="button">READ MORE</button>
+            </div>
+          </div>
+        </section>
+        <section id="section8">
+          <div class="scroller">
+            <img src="./Assets/img/section8_img/first.png" alt="" />
+            <img src="./Assets/img/section8_img/second.png" alt="" />
+            <img src="./Assets/img/section8_img/third.png" alt="" />
+            <img src="./Assets/img/section8_img/fourth.png" alt="" />
+            <img src="./Assets/img/section8_img/fifth.png" alt="" />
+            <img src="./Assets/img/section8_img/sixth.png" alt="" />
+            <img src="./Assets/img/section8_img/seventh.png" alt="" />
+            <img src="./Assets/img/section8_img/eighth.png" alt="" />
+          </div>
+        </section>
+        <section id="section9">
+          <div class="content">
+            <div class="first_box">
+              <img src="./Assets/img/header_img/logo2.png" alt="" />
+              <p>
+                Lorem ipsum dolor sit amet, consy ect etur adipisc de elit.
+                Quisque act raqum nunc no dolor sit de amet.
+              </p>
+              <div class="logos">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-google-plus-g"></i>
+              </div>
+            </div>
+            <div class="second_box">
+              <h1>Contact info</h1>
+              <ul class="infos">
+                <li class="info">
+                  <span><i class="fa-solid fa-location-dot"></i></span>
+                  <span>113 Fulton Street, Suite 721</span>
+                </li>
+                <li class="info">
+                  <span><i class="fa-solid fa-thumbtack"></i></span>
+                  <span>New York, NY 10010</span>
+                </li>
+                <li class="info">
+                  <span><i class="fa-regular fa-envelope"></i></span>
+                  <span>foton@qodeinteractive.com</span>
+                </li>
+                <li class="info">
+                  <span><i class="fa-solid fa-phone"></i></span>
+                  <span>+88 (0) 101 0000 000</span>
+                </li>
+              </ul>
+            </div>
+            <div class="third_box">
+              <span>Couldn't connect with Twitter</span>
+            </div>
+            <div class="fourth_box">
+              <h1>Support & Downloads</h1>
+              <p>
+                Quisque actraqum nunc no dolor sit ametaugue dolor. Lorem ipsum
+                dolor sit amet, consyect etur
+              </p>
+              <div class="downloads">
+                <img src="./Assets/img/section9_img/footer-icon1.png" alt="" />
+                <img src="./Assets/img/section9_img/footer-icon2.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer id="footer">
+        © 2018<span>Qode Interactive</span>, All Rights Reserved
+      </footer>
     </div>
-
 
     <!-- Loading page -->
 
@@ -147,13 +894,552 @@
 
     <div class="side_buttons_wrapper">
       <div class="side_button">
-        <div class="side_icon"></div>
-        <div class="side_content"></div>
+        <div class="side_icon">
+          <svg x="0px" y="0px" viewBox="0 0 87 87" class="side_icon_show">
+            <path
+              d="M55.4,81.5c6.1-11.1,5.2-16.1-4.3-24.3c6.1-3.5,9.5-8.5,9.1-15.7c-0.5-8.2-7.7-14.7-16.3-14.6
+							c-8.5,0.1-15.6,6.7-15.9,15c-0.3,8.5,5.9,15.8,14.3,16.6c1.4,0.1,2.8,0.2,4.2,0.5c5.9,1.2,10.2,6.7,9.8,12.6
+							c-0.4,6.4-5.5,11.4-11.8,11.7C24.9,84.2,5.9,68.5,3.2,49.3C-0.1,26.9,14.4,6.8,36.4,2.8c22.3-4,43.4,10,48.1,32
+							c4.3,20-8.6,41.2-28.4,46.7C55.9,81.5,55.6,81.5,55.4,81.5z"
+            ></path>
+          </svg>
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            style="fill: #fff; height: 20px"
+          >
+            <path
+              d="M 4,15C 4,15.552, 4.448,16, 5,16l 19.586,0 l-4.292,4.292c-0.39,0.39-0.39,1.024,0,1.414 c 0.39,0.39, 1.024,0.39, 1.414,0l 6-6c 0.092-0.092, 0.166-0.202, 0.216-0.324C 27.972,15.26, 28,15.132, 28,15.004c0-0.002,0-0.002,0-0.004 l0,0c0-0.13-0.026-0.26-0.078-0.382c-0.050-0.122-0.124-0.232-0.216-0.324l-6-6c-0.39-0.39-1.024-0.39-1.414,0 c-0.39,0.39-0.39,1.024,0,1.414L 24.586,14L 5,14 C 4.448,14, 4,14.448, 4,15z"
+            ></path>
+          </svg>
+        </div>
+        <span class="side_content">RELATED</span>
       </div>
       <div class="side_button">
-        <div class="side_icon"></div>
-        <div class="side_content"></div>
+        <div class="side_icon">
+          <svg x="0px" y="0px" viewBox="0 0 24 24">
+            <circle cx="9" cy="21" r="2"></circle>
+            <circle cx="20" cy="21" r="2"></circle>
+            <path
+              d="M23.8,5.4C23.6,5.1,23.3,5,23,5H6.8L6,0.8C5.9,0.3,5.5,0,5,0H1C0.4,0,0,0.4,0,1s0.4,1,1,1h3.2L5,6.2c0,0,0,0.1,0,0.1
+            l1.7,8.3C7,16,8.2,17,9.6,17c0,0,0,0,0.1,0h9.7c1.5,0,2.7-1,3-2.4L24,6.2C24,5.9,24,5.6,23.8,5.4z"
+            ></path>
+          </svg>
+        </div>
+        <div class="side_content">BUY NOW</div>
+      </div>
+      <div class="side_qode_menu">
+        <header>
+          <div class="logo">
+            <svg
+              x="0px"
+              y="0px"
+              viewBox="0 0 87 87"
+              style="fill: #ee2852; height: 40px"
+            >
+              <path
+                d="M55.4,81.5c6.1-11.1,5.2-16.1-4.3-24.3c6.1-3.5,9.5-8.5,9.1-15.7c-0.5-8.2-7.7-14.7-16.3-14.6
+            c-8.5,0.1-15.6,6.7-15.9,15c-0.3,8.5,5.9,15.8,14.3,16.6c1.4,0.1,2.8,0.2,4.2,0.5c5.9,1.2,10.2,6.7,9.8,12.6
+            c-0.4,6.4-5.5,11.4-11.8,11.7C24.9,84.2,5.9,68.5,3.2,49.3C-0.1,26.9,14.4,6.8,36.4,2.8c22.3-4,43.4,10,48.1,32
+            c4.3,20-8.6,41.2-28.4,46.7C55.9,81.5,55.6,81.5,55.4,81.5z"
+              ></path>
+            </svg>
+          </div>
+          <span>Qode interactive</span>
+        </header>
+        <main>
+          <h1>RELATED THEMES</h1>
+          <ul>
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/00_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Becca</p>
+                <div>
+                  <span class="theme">TECHNOLOGY</span
+                  ><span class="pricing">$85</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/00_preview.__large_preview.jpg"
+                  alt=""
+                />
+                <p class="name">Hawat</p>
+                <div>
+                  <span class="theme">TECHNOLOGY</span
+                  ><span class="pricing">$85</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/03_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Otaru</p>
+                <div>
+                  <span class="theme">TECHNOLOGY</span
+                  ><span class="pricing">$85</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/Deon.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Deon</p>
+                <div>
+                  <span class="theme">TECHNOLOGY</span
+                  ><span class="pricing">$85</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/05_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Cyberdom</p>
+                <div>
+                  <span class="theme">TECHNOLOGY</span
+                  ><span class="pricing">$85</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/JoinUp.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Join Up</p>
+                <div>
+                  <span class="theme">TECHNOLOGY</span
+                  ><span class="pricing">$85</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/07_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">TechLink</p>
+                <div>
+                  <span class="theme">TECHNOLOGY</span
+                  ><span class="pricing">$79</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/01_webon.__large_preview.jpg"
+                  alt=""
+                />
+                <p class="name">WebOn</p>
+                <div>
+                  <span class="theme">TECHNOLOGY</span
+                  ><span class="pricing">$85</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/09_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">CleverSoft</p>
+                <div>
+                  <span class="theme">TECHNOLOGY</span
+                  ><span class="pricing">$79</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/11_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Softwerk</p>
+                <div>
+                  <span class="theme">TECHNOLOGY</span
+                  ><span class="pricing">$79</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/12_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">BitPal</p>
+                <div>
+                  <span class="theme">TECHNOLOGY</span
+                  ><span class="pricing">$79</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/13_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Sceon</p>
+                <div>
+                  <span class="theme">TECHNOLOGY</span
+                  ><span class="pricing">$39</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/14_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Synergia</p>
+                <div>
+                  <span class="theme">TECHNOLOGY</span
+                  ><span class="pricing">$79</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/15_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Spark</p>
+                <div>
+                  <span class="theme">TECHNOLOGY</span
+                  ><span class="pricing">$79</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/16_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Fluid</p>
+                <div>
+                  <span class="theme">TECHNOLOGY</span
+                  ><span class="pricing">$79</span>
+                </div>
+              </div>
+            </li>
+
+
+          </ul>
+
+          <h1>RELATED THEMES</h1>
+          <ul>
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/17_preview_sale.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Expertise</p>
+                <div>
+                  <span class="theme">BUSINESS</span
+                  ><span class="pricing">$44</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/18_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">MyRitual</p>
+                <div>
+                  <span class="theme">WOOCOMMERCE</span
+                  ><span class="pricing">$89</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/19_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">ProPhysique</p>
+                <div>
+                  <span class="theme">MEDICAL</span
+                  ><span class="pricing">$79</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/20_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">WanderAway</p>
+                <div>
+                  <span class="theme">BLOG & MAGAZINE</span
+                  ><span class="pricing">$85</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/21_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Mien</p>
+                <div>
+                  <span class="theme">LIFESTYLE</span
+                  ><span class="pricing">$79</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/22_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Einar</p>
+                <div>
+                  <span class="theme">CREATIVE BUSINESS</span
+                  ><span class="pricing">$89</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/23_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Chaises</p>
+                <div>
+                  <span class="theme">WOOCOMMERCE</span
+                  ><span class="pricing">$85</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/24_preview.__large_preview.jpg"
+                  alt=""  
+                />
+                <p class="name">Sonora</p>
+                <div>
+                  <span class="theme">PHOTOGRAPHY</span
+                  ><span class="pricing">$85</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/25_preview.__large_preview.jpg"
+                  alt=""
+                />
+                <p class="name">Exon</p>
+                <div>
+                  <span class="theme">GAMING</span
+                  ><span class="pricing">$85</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/26_preview.__large_preview.png"
+                  alt=""  
+                />
+                <p class="name">Peony</p>
+                <div>
+                  <span class="theme">WOOCOMMERCE</span
+                  ><span class="pricing">$85</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/27_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Avelina</p>
+                <div>
+                  <span class="theme">FOOD & RESTAURANT</span
+                  ><span class="pricing">$79</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/28_preview.__large_preview.png"
+                  alt=""  
+                />
+                <p class="name">Donde</p>
+                <div>
+                  <span class="theme">PORTFOLIO</span
+                  ><span class="pricing">$85</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/29_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Orison</p>
+                <div>
+                  <span class="theme">NONPROFIT</span
+                  ><span class="pricing">$79</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/Sorina.__large_preview.png"
+                  alt=""  
+                />
+                <p class="name">Sørina</p>
+                <div>
+                  <span class="theme">PORTFOLIO</span
+                  ><span class="pricing">$85</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="content">
+                <img
+                  src="./Assets/img/qode_menu_img/30_preview.__large_preview.png"
+                  alt=""
+                />
+                <p class="name">Morkie</p>
+                <div>
+                  <span class="theme">WOOCOMMERCE</span
+                  ><span class="pricing">$79</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </main>
+        <footer>
+          <span>VIEW ALL QODE THEMES</span>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="9"
+              height="9"
+              viewBox="0 0 9 9"
+            >
+              <image
+                width="9"
+                height="9"
+                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAQAAABKmM6bAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBhISBAPLk0qYAAAAZ0lEQVQI103OsQnCUACE4S9qmofLWLpDcChXEPcIksoF3CG94ALaBDmLl0j+Kw7urjgxq2TMmBIblWLQag1KE2jcbT1w9F1WN53JpNPvQFzm6uO6rFaso/3s/xOHPHOKkFcq75xr+QPBNi/UsU/OawAAAABJRU5ErkJggg=="
+              ></image>
+            </svg>
+          </span>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Side menu -->
+    <div class="side_menu">
+      <div class="close_button">X</div>
+      <div class="support_downloads">
+        <h1>Support & Downloads</h1>
+        <p>
+          Quisque actraqum nunc no dolor sit ametaugue dolor. Lorem ipsum dolor
+          sit amet, consyect etur adipiscing elit.
+        </p>
+        <img src="./Assets/img/side_menu_img/side_img2.png" alt="" />
+        <img src="./Assets/img/side_menu_img/side_img1.png" alt="" />
+      </div>
+      <div class="contact">
+        <h1>Contact info</h1>
+        <ul class="infos">
+          <li class="info">
+            <span><i class="fa-solid fa-location-dot"></i></span>
+            <span>198 Fulton Street, Suite 721</span>
+          </li>
+          <li class="info">
+            <span><i class="fa-solid fa-thumbtack"></i></span>
+            <span>New York, NY 10010</span>
+          </li>
+          <li class="info">
+            <span><i class="fa-regular fa-envelope"></i></span>
+            <span>foton@qodeinteractive.com</span>
+          </li>
+          <li class="info">
+            <span><i class="fa-solid fa-phone"></i></span>
+            <span>+88 (0) 101 0000 000</span>
+          </li>
+        </ul>
+      </div>
+      <div class="follow">
+        <h1>Follow Us</h1>
+        <div class="logos">
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-google-plus-g"></i>
+        </div>
       </div>
     </div>
   </body>
+  <script type="module" src="./Assets/scripts/main.js"></script>
 </html>
