@@ -817,7 +817,7 @@ body {
   position: relative;
   top: 0;
 
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
 
@@ -835,7 +835,7 @@ body {
 }
 
 .mobile_navbar {
-  display: none;
+  display: none; 
 }
 
 .mobile_navbar li span {
@@ -896,7 +896,7 @@ body {
     position: absolute;
     top: 69px;
     background-color: white;
-    padding-left: 100px;
+    padding-left: 250px;
     overflow: scroll;
   }
 
@@ -1708,7 +1708,7 @@ body {
     width: 162px;
     height: 72px;
     top: 150px;
-    left: 0;
+    left: calc(50% - 250px);
   }
 }
 
