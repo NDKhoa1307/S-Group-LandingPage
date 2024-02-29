@@ -25,7 +25,6 @@ var starting = true;
 
 function handleScroll() {
   const cart = document.querySelector('.header .selection_menu .cls')
-  console.log("🚀 ~ handleScroll ~ cart:", cart)
   const scrollPosition = window.scrollY;
 
   if (scrollPosition > 200) {
