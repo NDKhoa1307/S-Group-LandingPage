@@ -18,7 +18,7 @@ body {
 
 /* Side buttons CSS */
 .side_buttons_wrapper {
-  z-index: 2;
+  z-index: 3;
   position: fixed;
 
   right: 0;
@@ -2523,6 +2523,7 @@ body {
 #section7 > div {
   width: 30%;
   max-width: 413px;
+  border-radius: 5px;
   border: none;
 
   display: flex;
@@ -3067,7 +3068,7 @@ body {
 /* Side menu CSS */
 .side_menu {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   right: 0;
   width: 470px;

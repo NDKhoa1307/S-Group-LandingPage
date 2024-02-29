@@ -16,15 +16,20 @@ function appendElems(section, elements_classes) {
   return elements;
 }
 
+
+
 // Header animation
 
 const header = document.querySelector(".header");
 var starting = true;
 
 function handleScroll() {
-  const scrollPosition = window.pageYOffset;
+  const cart = document.querySelector('.header .selection_menu .cls')
+  console.log("🚀 ~ handleScroll ~ cart:", cart)
+  const scrollPosition = window.scrollY;
 
   if (scrollPosition > 200) {
+    cart.style.display = 'none';
     if (starting) {
       header.style.transition = "0s";
       header.style.transform = "translateY(-100%)";
@@ -40,6 +45,7 @@ function handleScroll() {
     header.querySelector(".navbar .navbar__selections").style.marginTop =
       "20px";
   } else {
+    cart.style.display = 'inline-block';
     starting = true;
     header.classList.remove("header-active");
     let logo = header.querySelector(".logo img");
